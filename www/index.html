@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    
+    
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    
+    
+
+    <style type="text/css">
+      .platform-ios .manual-ios-statusbar-padding{
+        padding-top:20px;
+      }
+      .manual-remove-top-padding{
+        padding-top:0px; 
+      }
+      .manual-remove-top-padding .scroll{
+        padding-top:0px !important;
+      }
+      ion-list.manual-list-fullwidth div.list, .list.card.manual-card-fullwidth {
+        margin-left:-10px;
+        margin-right:-10px;
+      }
+      ion-list.manual-list-fullwidth div.list > .item, .list.card.manual-card-fullwidth > .item {
+        border-radius:0px;
+        border-left:0px;
+        border-right: 0px;
+      }
+      .show-list-numbers-and-dots ul{
+        list-style-type: disc;
+        padding-left:40px;
+      }
+      .show-list-numbers-and-dots ol{
+        list-style-type: decimal;
+        padding-left:40px;
+      }
+        
+        /* Login Page Styling */
+        
+        .social-login {
+            text-align:center;
+        }
+        .social-login img{
+            height:45px;
+            margin:0;
+            display:block;
+            vertical-align: middle;           
+        }
+        
+       .social-icon::after {
+          content:""; 
+          background: skyblue; 
+          position: absolute; 
+          top: 25%; 
+          left: 20%; 
+          height: 50%; 
+          width: 1px;
+        } 
+        
+        .social-icon-facebook img{
+            height:30px;
+            position: absolute;
+            top:50%;
+            left:8%;
+            transform:translateY(-50%);
+        }
+        
+        .social-icon-instagram img {
+            position: absolute; 
+            left:8%;
+            transform:translateY(-50%);
+            transform:translateX(-28%);
+        }
+        
+        .social-login span {
+            font-weight: 500;
+        }
+        
+        .sign-buttons {
+           margin:0;
+        }
+        
+        /* Profile Page Styling */
+        
+        .bubble {
+            padding:3px 6px;
+            border-radius:50%;
+        }
+        
+        .likes {
+            background-color:deeppink;
+        }
+        
+        .views {
+            background-color:mediumseagreen;
+        }
+        
+        .comments {
+            background-color:skyblue;
+        }
+        
+        .overlay {
+            background-color:rgba(0,0,0,.3);
+        }
+        .profile-close{
+            font-size:28px;
+            color:white;
+        }
+        
+        /* Friends Page Styling */
+        
+        .friends-link {
+            text-decoration:none;
+            color:black;
+            text-align:center;
+        }
+        
+        .friends-link h5, .friends-link p {
+            margin:0;  
+            display:block;
+        }
+        
+        .stryx-avatar {
+            width:50px;
+            height:50px;
+            border-radius:50%;
+        }
+        
+        .comtain-img {
+            width:100%;
+            margin:0;
+            
+        }
+        .friends-link .stryx-avatar {
+            display:inline-block;
+            margin-left:auto;
+            margin-right:auto;
+            width:75px;
+            height:75px;
+        }
+        .friends-link p {
+            font-size:75%;
+            color:dimgray;
+        }
+        
+        /* Feed Page Styling */
+        
+        .feed-header .stryx-avatar {
+            width:50px;
+            height:50px;
+        }
+        
+        .feed-time {
+            color:dimgray;
+        }
+        
+        .feed-header h5, .feed-header p{
+            margin: 0;
+        }
+        
+        .feed-header p {
+            color:dimgray;
+        }
+        
+        .feed-likes {
+             background-color:steelblue;
+        }
+        
+        .feed-comments{
+             background-color:deeppink;
+        }
+        
+        .feed-shares {
+            background-color:goldenrod;
+        }
+        
+        .feed-bubble {
+            border-radius:5000px;
+            padding: 5px 10px;
+            color:white;
+            width:15px;
+            margin:0px 5px;
+        }
+        .last-pic {
+            display:inline-block;
+            background-image:url("/img/chords.jpg");
+            background-repeat:no-repeat;
+            background-size: contain;
+            width:100%;
+            height:100%;
+        }
+        
+        .more-overlay {
+            width:100%;
+            height:79.5%;
+            background-color:rgba(0,0,0,.6);
+            text-align:center;
+            font-size:36px;
+        }
+        
+        .more-overlay span {
+            color:white;
+            display: inline-block;
+            position:relative;
+            top:50%;
+            transform:translateY(-50%);
+        }
+        
+        .message h2 {
+            display:inline-block;
+        }
+        
+        /* Messages Page Styling */
+        
+        .message {
+            border:none;
+        }
+        
+        .online-indicator {
+            display: inline-block;
+            transform:scale(4) translateY(-5%);
+        }
+        
+        .online {
+            color:limegreen;
+        }
+        
+        .offline {
+            color:dimgray;
+        }
+        .unread {
+            font-weight:bold;
+        }
+        
+        /* Message Page Styling */
+        
+        .to p {
+            background-color:whitesmoke;
+            border-bottom-left-radius: 25px;
+            border-top-left-radius: 25px;
+        }
+        
+        .from p{
+            background-color:slateblue;
+            color:whitesmoke;
+            border-bottom-right-radius:25px;
+            border-top-right-radius:25px;
+        }
+        
+        .to p, .from p {
+            display:inline-block;
+            margin:2px;
+            padding:10px;
+        }
+        
+        .to p:first-of-type {
+            margin-top: 10px;
+            border-top-right-radius:25px; 
+           
+        }
+        
+        
+        .from p:first-of-type {
+            margin-top: 10px;
+            border-top-left-radius:25px;
+        }
+        
+        .to p:last-of-type { 
+            border-bottom-right-radius:25px;
+            margin-bottom:10px;
+        }
+        .from p:last-of-type {
+            border-bottom-left-radius:25px;
+            margin-bottom:10px;
+        }
+        
+        /* Channels Page Styling */ 
+        .channel-bar {
+            padding-top:0;
+            height:70px;
+        }
+        .channel {
+            text-align:center;
+        }
+        
+        .channel h4 {
+            font-size:10px;
+            color: white;
+            margin:0;
+        }
+        
+        .channel img {
+            width:50px;
+            height:50px;
+            border-radius: 5px;
+        }
+        .channel-button {
+            color:rgba(200,40,100,.5);
+            font-size:40px;
+            text-align:center;
+        }
+        .channel-button:active {
+            color:rgba(200,40,100,.8);
+        }
+        
+        .channel-dropdown {
+            position:relative;
+            top:50%;
+            transform:translateY(-40%);
+        }
+        
+        .channel-feed {
+            
+        }
+        
+        .channel-box {
+            width:100%;
+            position:relative;
+            
+        }
+        .channel-box-img {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+        }
+            
+        .channel-box-small {
+            height:30vh;
+        }
+        
+        .channel-box-large {
+            height:60vh;
+        }
+        .channel-box-wide {
+            height:30vh;
+        }
+        .channel-box-extra-large {
+            height:85vh;
+        }
+        .channel-box-col {
+            padding:0;
+        }
+        .heading .stryx-avatar {
+            display:inline-block;
+            height:35px;
+            width:35px;
+            position:absolute;
+            left:2px;
+            top:2px;
+        }
+        .heading h5 {
+            margin:0;
+            display:inline-block;
+            position:relative;
+            vertical-align: middle;
+            left:35%;
+            top:50%;
+            transform:translateY(-50%);
+            color:white;
+        }
+        .heading, .footing {
+            background-color:rgba(0,0,0,.4);
+            position:absolute;
+            width:100%;
+            margin:0;
+            
+        }
+        .heading {
+            height:30px;
+            top:0;
+        }
+        .footing {
+            height:45px;
+            bottom:0;
+            padding:3px;
+        }
+        
+        .footing .caption {
+            font-size:14px;
+            text-align:center;
+            color:white;
+            
+        }
+        .stats {
+            text-align:center;
+            position:absolute;
+            bottom: 5px;  
+            width:100%;  
+            color:white;
+        }
+        .stat-shares {
+            color:green;
+        }
+        
+        .stat-likes {
+            color:red;
+        }
+        channel-panel {
+            width:100%;
+            background-color:grey;
+            z-index: 3;
+            position:absolute;
+            top:47px;
+            transform:translateY(-200px);
+        }
+        .has-channel-panel {
+            top:110px;
+        }
+        
+    </style>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    
+     
+    <script src="js/directives.js"></script>
+     
+    <script src="js/services.js"></script>
+    
+
+    <!-- Only required for Tab projects w/ pages in multiple tabs 
+    <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
+    -->
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+  <div>
+  <div>
+    <!-- <ion-nav-bar class="bar-royal">
+      <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar> -->
+    <ion-nav-view></ion-nav-view> 
+  </div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "Stryx",
+  "app_id": "f695828a",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}
