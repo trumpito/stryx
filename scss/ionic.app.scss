@@ -19,14 +19,15 @@ $dark:                            #444 !default;
 @import "www/lib/ionic/scss/variables";
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
-//$bar-height: 100px;
+$bar-height: 130px;
+
 //$bar-title-font-size: 32px;
 
 //$bar-footer-height:44px;
 
-
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
 
 
 

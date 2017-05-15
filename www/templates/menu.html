@@ -1,19 +1,24 @@
 <ion-side-menus enable-menu-with-back-views="false">
   <ion-side-menu-content>
-    <ion-nav-bar class="bar-royal">
+    <ion-nav-bar class="large-header gradient-bg">
       <ion-nav-back-button></ion-nav-back-button>
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
       </ion-nav-buttons>
-    </ion-nav-bar>
-    <ion-nav-view name="side-menu21"></ion-nav-view>
+        <ion-nav-buttons side="right">
+            <button class="button button-icon button-clear ion-ios-search stryx-search" ui-sref="menu.search" ng-hide="$parent.$title == 'Search' "></button>
+            <button class="button button-icon button-clear" ui-sref="menu.profile"><img class="stryx-user-pic" src="img/USER_PIC.png"></button>
+        </ion-nav-buttons>
+    </ion-nav-bar> 
+    <ion-nav-view name="side-menu21" class="has-large-header"></ion-nav-view>
   </ion-side-menu-content>
   <ion-side-menu side="left" id="side-menu21" style="background-color:#C134DF;">
     <ion-content padding="false" style="top:0px !important;" class="side-menu-left ">
+        <div class="spacer" style="width: 300px; height: 44.9896px;"></div>
       <h2 id="menu-heading1" style="color:#E9E9E9;font-weight:400;text-align:center;">S T R Y X</h2>
       <ion-list id="menu-list1">
-        <ion-item class="item-icon-left item-royal" id="menu-list-item9" ui-sref="menu.profile" menu-close="">
-          <i class="icon ion-ios-person"></i>Profile</ion-item>
+        <!-- <ion-item class="item-icon-left item-royal" id="menu-list-item9" ui-sref="menu.profile" menu-close="">
+          <i class="icon ion-ios-person"></i>Profile</ion-item> -->
         <ion-item class="item-icon-left item-royal" id="menu-list-item11" ui-sref="menu.channels" menu-close="">
           <i class="icon ion-android-funnel"></i>Channels</ion-item>
         <ion-item class="item-icon-left item-royal" id="menu-list-item1" ui-sref="menu.feed" menu-close="">

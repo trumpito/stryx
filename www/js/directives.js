@@ -31,7 +31,7 @@ function channelPanel(ionic, $rootScope) {
                     self.setY(self.dstY);
                     self.isOpen = false;
                 } else {
-                    self.setY(0);
+                    self.setY(-4);
                     self.isOpen = true;
                 }
                 console.log(self.isOpen);

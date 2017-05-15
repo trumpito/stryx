@@ -7,14 +7,16 @@
 
     
     
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>   
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
     <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto%3A300" rel="stylesheet">
+      
+      
     
     
 
@@ -45,6 +47,109 @@
         list-style-type: decimal;
         padding-left:40px;
       }
+        /* General Styling */ 
+        
+        .gradient-bg {
+            background: #a84ef2;
+            background: -moz-radial-gradient(bottom, ellipse cover, #a84ef2 0%, #a84ef2 52%, #7780e6 100%) !important;
+            background: -webkit-gradient(radial, bottom bottom, 0px, bottom bottom, 100%, color-stop(0%, #a84ef2), color-stop(52%, #a84ef2), color-stop(100%, #7780e6)) !important;
+            background: -webkit-radial-gradient(bottom, ellipse cover, #a84ef2 0%, #a84ef2 52%, #7780e6 100%) !important;
+            background: -o-radial-gradient(bottom, ellipse cover, #a84ef2 0%, #a84ef2 52%, #7780e6 100%) !important;
+            background: -ms-radial-gradient(bottom, ellipse cover, #a84ef2 0%, #a84ef2 52%, #7780e6 100%) !important;
+            background: radial-gradient(ellipse at bottom, #a84ef2 0%, #a84ef2 52%, #7780e6 100%) !important;
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a84ef2', endColorstr='#7780e6', GradientType=1 ) !important;
+            color:white;
+            border-bottom-width: 0;
+            background-size:cover !important;
+            background-position:bottom !important;
+            background-repeat: no-repeat !important; 
+            
+            
+        } 
+        .gradient-bg-tab {
+            background: #a84ef2;
+            background: -moz-radial-gradient(bottom, ellipse cover, #a84ef2 50%, #7780e6 325%) !important;
+            background: -webkit-gradient(radial, bottom bottom, 0px, bottom bottom, 325%, color-stop(50%, #a84ef2), color-stop(325%, #7780e6)) !important;
+            background: -webkit-radial-gradient(bottom, ellipse cover, #a84ef2 50%,  #7780e6 325%) !important;
+            background: -o-radial-gradient(bottom, ellipse cover, #a84ef2 50%,  #7780e6 325%) !important;
+            background: -ms-radial-gradient(bottom, ellipse cover, #a84ef2 50%,  #7780e6 325%) !important;
+            background: radial-gradient(ellipse at bottom, #a84ef2 50%,  #7780e6 325%) !important;
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a84ef2', endColorstr='#7780e6', GradientType=1 ) !important;
+            color:white;
+            border-bottom-width: 0;
+            background-size:cover !important;
+            background-position:center!important;
+           background-attachment: fixed !important;
+            background-repeat: no-repeat !important; 
+        }
+        
+        .tabs-striped .tabs .tab-item.active, .tabs-striped .tabs .tab-item.activated {
+            border-top:none !important;
+            border-bottom: solid 3px red !important;
+        }
+        
+        .large-header.gradient-bg .title {
+            top:initial !important;
+            left:20px !important;
+            bottom:4% !important;
+            right:initial !important;
+            height:initial !important;
+            line-height:initial !important;
+            font-size:32px;
+            font-family: "Roboto", sans-serif;
+            font-weight:300;
+        }
+        .stryx-search::before {
+            font-size:32px !important;
+        }
+        
+        .large-header.gradient-bg .right-buttons button{
+            margin:0 10px 0 0 !important;
+        }
+        
+        
+        .large-header.gradient-bg .right-buttons, .large-header.gradient-bg .left-buttons, .large-header.gradient-bg .back-button {
+            margin-top:20px;
+        }
+        
+        .large-header.gradient-bg button {
+            color: white !important;
+            font-size:45px !important;
+        }
+        
+        .large-header.gradient-bg .buttons-left button{
+            left:20px !important;
+        }
+        
+        .large-header.gradient-bg .back-button {
+            left:25px !important;
+        }
+        
+        .large-header.gradient-bg button i::before, .large-header.gradient-bg .buttons-left button::before  {
+            font-size:45px !important;
+        }
+        
+        .stryx-user-pic {
+            width:45px;
+            height:45px;
+        }
+        
+        /* Search Page Styling */
+        .search-bar label {
+            background-color:transparent;
+            border:solid 2px fuchsia;
+        }
+        
+        .search-bar i::before {
+            font-size:36px;
+        }
+        
+        .search-bar input {
+            color:azure;
+            font-size:20px;
+        }
+        
+
         
         /* Login Page Styling */
         
@@ -99,15 +204,15 @@
         }
         
         .likes {
-            background-color:deeppink;
+            background-color:#f41ea0;
         }
         
         .views {
-            background-color:mediumseagreen;
+            background-color:#33bca6;
         }
         
         .comments {
-            background-color:skyblue;
+            background-color:#5faae1;
         }
         
         .overlay {
@@ -155,10 +260,25 @@
         }
         
         /* Feed Page Styling */
+        .post {
+            box-shadow: none;
+        }
         
         .feed-header .stryx-avatar {
             width:50px;
             height:50px;
+        }
+        
+        .border-green {
+            border: solid #a9d24d 2px;
+        }
+        
+        .border-yellow {
+            border: solid #eecb3d 2px;
+        }
+        
+        .border-blue {
+            border: solid #56b0f2 2px;
         }
         
         .feed-time {
@@ -174,27 +294,27 @@
         }
         
         .feed-likes {
-             background-color:steelblue;
+             background-color:#789fc1;
         }
         
         .feed-comments{
-             background-color:deeppink;
+             background-color:#d632b3;
         }
         
         .feed-shares {
-            background-color:goldenrod;
+            background-color:#e4b436;
         }
         
         .feed-bubble {
             border-radius:5000px;
-            padding: 5px 10px;
+            padding: 5px 15px;
             color:white;
             width:15px;
             margin:0px 5px;
         }
         .last-pic {
             display:inline-block;
-            background-image:url("/img/chords.jpg");
+            background-image:url("img/chords.jpg");
             background-repeat:no-repeat;
             background-size: contain;
             width:100%;
@@ -286,6 +406,28 @@
         }
         
         /* Channels Page Styling */ 
+        .medium-header {
+            height:85px;
+            line-height: 85px;
+        }
+        
+        .medium-header.gradient-bg button {
+            color: white !important;
+            font-size:45px !important;
+        }
+        
+        .medium-header.gradient-bg .buttons-left button{
+            left:20px !important;
+        }
+        
+        .medium-header.gradient-bg .back-button {
+            left:25px !important;
+        }
+        
+        .header-channel{
+            z-index:2;
+        }
+        
         .channel-bar {
             padding-top:0;
             height:70px;
@@ -366,9 +508,9 @@
             display:inline-block;
             position:relative;
             vertical-align: middle;
-            left:35%;
+            left:50%;
             top:50%;
-            transform:translateY(-50%);
+            transform:translate(-50%, -50%);
             color:white;
         }
         .heading, .footing {
@@ -410,14 +552,14 @@
         }
         channel-panel {
             width:100%;
-            background-color:grey;
+            background-color:rgba(85, 95, 113, .8);
             z-index: 3;
             position:absolute;
-            top:47px;
+            top:133px;
             transform:translateY(-200px);
         }
         .has-channel-panel {
-            top:110px;
+            top:197px;
         }
         
     </style>
