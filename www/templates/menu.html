@@ -6,30 +6,36 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
       </ion-nav-buttons>
         <ion-nav-buttons side="right">
-            <button class="button button-icon button-clear ion-ios-search stryx-search" ui-sref="menu.search" ng-hide="$parent.$title == 'Search' "></button>
-            <button class="button button-icon button-clear" ui-sref="menu.profile"><img class="stryx-user-pic" src="img/USER_PIC.png"></button>
+            <button class="button button-icon button-clear ion-ios-search stryx-search" ui-sref="menu.search" ng-hide="$parent.$title.toLowerCase() == 'search' "></button>
+            <button class="button button-icon button-clear" ui-sref="menu.profile"><img class="stryx-user-pic" src="img/profile/USER_PIC.png"></button>
         </ion-nav-buttons>
     </ion-nav-bar> 
     <ion-nav-view name="side-menu21" class="has-large-header"></ion-nav-view>
   </ion-side-menu-content>
-  <ion-side-menu side="left" id="side-menu21" style="background-color:#C134DF;">
+  <ion-side-menu side="left" id="side-menu21" style="background-color:#222;">
     <ion-content padding="false" style="top:0px !important;" class="side-menu-left ">
-        <div class="spacer" style="width: 300px; height: 44.9896px;"></div>
-      <h2 id="menu-heading1" style="color:#E9E9E9;font-weight:400;text-align:center;">S T R Y X</h2>
+        <div class="menu-profile">
+            <img class="stryx-avatar" src="img/profile/profile-pic-user.jpg" >
+            <h2>Sarah Lockland</h2>
+            <p>948 Followers</p>
+        </div>
+      
       <ion-list id="menu-list1">
-        <!-- <ion-item class="item-icon-left item-royal" id="menu-list-item9" ui-sref="menu.profile" menu-close="">
-          <i class="icon ion-ios-person"></i>Profile</ion-item> -->
-        <ion-item class="item-icon-left item-royal" id="menu-list-item11" ui-sref="menu.channels" menu-close="">
-          <i class="icon ion-android-funnel"></i>Channels</ion-item>
-        <ion-item class="item-icon-left item-royal" id="menu-list-item1" ui-sref="menu.feed" menu-close="">
-          <i class="icon ion-social-buffer"></i>Feed</ion-item>
-        <ion-item class="item-icon-left item-royal" id="menu-list-item2" ui-sref="menu.friends" menu-close="">
-          <i class="icon ion-ios-people"></i>Friends</ion-item>
-        <ion-item class="item-icon-left item-royal" id="menu-list-item3" ui-sref="menu.messages" menu-close="">
-          <i class="icon ion-ios-email"></i>Messages</ion-item>
-        <ion-item class="item-icon-left item-royal" id="menu-list-item10" ui-sref="menu.settings" menu-close="">
-          <i class="icon ion-ios-gear"></i>Settings</ion-item>
+        <ion-item class="item-dark menu-item" id="menu-list-item9" ui-sref="menu.profile" menu-close="" active-page-highlight>
+          Profile</ion-item>
+        <ion-item class="item-dark menu-item" id="menu-list-item11" ui-sref="menu.channels" menu-close="" active-page-highlight>
+          Channels</ion-item>
+        <ion-item class="item-dark menu-item" id="menu-list-item1" ui-sref="menu.feed" menu-close="" active-page-highlight>
+          Feed</ion-item>
+        <ion-item class="item-dark menu-item" id="menu-list-item2" ui-sref="menu.friends" menu-close="" active-page-highlight>
+          Friends</ion-item>
+        <ion-item class="item-dark menu-item" id="menu-list-item3" ui-sref="menu.messages" menu-close="" active-page-highlight>
+          Messages</ion-item>
+        <ion-item class="item-dark menu-item" id="menu-list-item10" ui-sref="menu.settings" menu-close="" active-page-highlight>
+          Settings</ion-item>
       </ion-list>
+        <div class="spacer" style="width: 300px; height: 40px;"></div>
+        <h2 id="menu-heading1" style="color:#E9E9E9;font-weight:400;text-align:center;" class="menu-logo">S T R Y X</h2>
     </ion-content>
   </ion-side-menu>
 </ion-side-menus>

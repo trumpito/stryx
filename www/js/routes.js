@@ -73,7 +73,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.message', {
-    url: '/message',
+    url: '/message/:name',
     views: {
       'side-menu21': {
         templateUrl: 'templates/message.html',
@@ -83,7 +83,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.profile', {
-    url: '/profile',
+    url: '/profile/:name',
     views: {
       'side-menu21': {
         templateUrl: 'templates/profile.html',

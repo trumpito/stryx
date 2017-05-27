@@ -1,9 +1,30 @@
 angular.module('app.directives', [])
 .constant('ionic',window.ionic)
 .directive('channelPanel', channelPanel)
+.directive('activePageHighlight', activePageHighlight)
 .factory('channelPanelDelegate',channelPanelDelegate);
 
 channelPanel.$inject = ['ionic', '$rootScope'];
+activePageHighlight.$inject = ['$rootScope', '$state'];
+
+function activePageHighlight($rootScope, $state){
+    return function ($scope, $element, $attr) {
+       
+     function checkUISref(){
+       if ($state.is($attr['uiSref'])){
+             $element.addClass('active-page-highlight');
+         } else {
+             $element.removeClass('active-page-highlight');
+         }
+     }
+     
+     checkUISref();
+       
+     $rootScope.$on('$stateChangeSuccess', function(){
+         checkUISref();
+     })
+   };
+}
 
 function channelPanel(ionic, $rootScope) {
       var ChannelPanelView = ionic.views.View.inherit({
@@ -15,7 +36,6 @@ function channelPanel(ionic, $rootScope) {
             this.isOpen = false;
             this.panelAnimDuration = opts.duration;
             this.dstY = opts.dstY;
-            console.log(this.el);
         },
         setY : function(y) {
             this.el.style[ionic.CSS.TRANSFORM] = 'translate3d(0px,'+ y + 'px, 0)';
@@ -34,7 +54,6 @@ function channelPanel(ionic, $rootScope) {
                     self.setY(-4);
                     self.isOpen = true;
                 }
-                console.log(self.isOpen);
             });
            
         },
