@@ -18,6 +18,7 @@
     "cordova-plugin-whitelist",
     "cordova-plugin-console",
     "cordova-plugin-device",
+    "cordova-plugin-camera",
     "ionic-plugin-keyboard",
     "cordova-plugin-statusbar",
     "cordova-plugin-splashscreen"

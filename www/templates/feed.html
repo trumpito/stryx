@@ -1,4 +1,4 @@
-<ion-view title="FEED" id="page1">
+<ion-view title="FEED" id="page1" disable-back-views="true">
     <div class="tabs-striped tabs-top tabs-color-light">
         <div class="tabs gradient-bg-tab">
           <a class="tab-item">       
@@ -12,6 +12,34 @@
         </div>
     </div>
     <ion-content padding="true" class="has-header has-tabs-top">
+    <div class="list card post" id="feed-card22" ng-show="uploadPost">       
+           <div class="row feed-header">
+            <div class="col-20">
+                <img class="stryx-avatar border-blue" src="img/profile/profile-pic-user.jpg">
+            </div>
+            <div class="col-60 col-center">
+                <div class="feed-header-text">
+                    <h5>Sarah Lockland</h5>
+                    <p>#MyOwnPost</p>
+                </div>
+            </div>
+            <div class="col-20 col-center">
+                    <p class="feed-time" style="text-align:right;">Now</p>
+            </div>
+          </div>
+      <div class=" row">
+          <div class="col">
+                  <img src="{{uploadedImage}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+          </div>
+      </div>
+      <div id="feed-container4">
+        <p style="text-align:left;">
+          <span class="feed-likes feed-bubble"> <span class="icon ion-heart"></span> 280</span>
+            <span class="feed-comments feed-bubble"> <span class="icon ion-chatbubble"></span> 15</span>
+        <span class="feed-shares feed-bubble"> <span class="icon ion-android-share-alt"></span> 5</span>
+        </p>
+      </div>
+    </div>
     <div class="list card post" id="feed-card21">
           <div class="row feed-header">
             <div class="col-20">

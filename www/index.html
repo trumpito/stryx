@@ -10,6 +10,7 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>   
 
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <script src="cordova.js"></script>
 
     <!-- compiled css output -->
@@ -307,6 +308,24 @@
         /* Feed Page Styling */
         .post {
             box-shadow: none;
+        }
+        
+        .fab-add-photo {
+            text-align: center;
+            position: fixed;
+            z-index: 10000;
+            background-color:fuchsia;
+            width:65px;
+            height:65px;
+            border-radius: 50%;
+            bottom:2.5%;
+            right:2.5%;
+        }
+        
+        .fab-add-photo span{
+            color:white;
+            font-size:40px;
+            line-height: 65px;
         }
         
         .feed-header .stryx-avatar {

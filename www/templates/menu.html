@@ -6,7 +6,7 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
       </ion-nav-buttons>
         <ion-nav-buttons side="right">
-            <button class="button button-icon button-clear ion-ios-search stryx-search" ui-sref="menu.search" ng-hide="$parent.$title.toLowerCase() == 'search' "></button>
+            <button class="button button-icon button-clear ion-camera stryx-search" ng-click="takePicture()"></button>
             <button class="button button-icon button-clear" ui-sref="menu.profile"><img class="stryx-user-pic" src="img/profile/USER_PIC.png"></button>
         </ion-nav-buttons>
     </ion-nav-bar> 
@@ -31,6 +31,8 @@
           Friends</ion-item>
         <ion-item class="item-dark menu-item" id="menu-list-item3" ui-sref="menu.messages" menu-close="" active-page-highlight>
           Messages</ion-item>
+          <ion-item class="item-dark menu-item" id="menu-list-item10" ui-sref="menu.search" menu-close="" active-page-highlight>
+          Search</ion-item>
         <ion-item class="item-dark menu-item" id="menu-list-item10" ui-sref="menu.settings" menu-close="" active-page-highlight>
           Settings</ion-item>
       </ion-list>
